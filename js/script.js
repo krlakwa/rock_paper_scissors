@@ -113,14 +113,14 @@ function setGamePoints() {
 
 function endGame() {
   var welcomeElement = document.getElementById('js-welcomeElement'),
-      winnerText = document.createElement('h3')
+      winnerText = document.createElement('h3');
   
   if (player.score == 10) {
   
     winnerText.innerText = player.name + " wins!";
     welcomeElement.appendChild(winnerText);
     gameState = 'ended';
-    setGameElements()
+    setGameElements();
   
   } else if (computer.score == 10) {
       winnerText.innerText = "Computer wins!";
