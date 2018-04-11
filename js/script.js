@@ -84,12 +84,12 @@ function checkRoundWinner(playerPick, computerPick) {
 
   var winnerIs = 'player';
 
-    if (playerPick == computerPick) {
+    if (playerPick === computerPick) {
         winnerIs = 'noone';
     } else if (
-        (computerPick == 'rock' &&  playerPick == 'scissors') ||
-        (computerPick == 'scissors' &&  playerPick == 'paper') ||
-        (computerPick == 'paper' &&  playerPick == 'rock')) {
+        (computerPick === 'rock' &&  playerPick === 'scissors') ||
+        (computerPick === 'scissors' &&  playerPick === 'paper') ||
+        (computerPick === 'paper' &&  playerPick === 'rock')) {
 
         winnerIs = 'computer';
     }
@@ -114,14 +114,14 @@ function endGame() {
   var welcomeElement = document.getElementById('js-welcomeElement'),
       winnerText = document.createElement('h3');
   
-  if (player.score == 10) {
+  if (player.score === 10) {
   
     winnerText.innerText = player.name + " wins!";
     welcomeElement.appendChild(winnerText);
     gameState = 'ended';
     setGameElements();
   
-  } else if (computer.score == 10) {
+  } else if (computer.score === 10) {
       winnerText.innerText = "Computer wins!";
       welcomeElement.appendChild(winnerText);
       gameState = 'ended';
