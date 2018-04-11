@@ -56,6 +56,7 @@ function newGame() {
     setGamePoints();
   } else {
     alert('You need to type your name');
+    newGame();
   }
 }
 
