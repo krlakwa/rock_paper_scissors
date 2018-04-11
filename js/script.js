@@ -54,6 +54,8 @@ function newGame() {
     
     playerNameElem.innerHTML = player.name;
     setGamePoints();
+  } else {
+    alert('You need to type your name');
   }
 }
 
